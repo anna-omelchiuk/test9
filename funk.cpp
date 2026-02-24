@@ -18,23 +18,23 @@ bool IsPrime(int num)
     return true;
 }
 
-// Завдання 1
+// Р—Р°РІРґР°РЅРЅСЏ 1
 
-int* Allocate(int size)  // Функція розподілу динамічної пам'яті.
+int* Allocate(int size)
 {
     return new int[size];
 }
 
-void InitArr(int* arr, int size)  // Функція ініціалізації динамічного масиву.
+void InitArr(int* arr, int size)
 {
-    cout << "Введіть " << size << " елементів: ";
+    cout << "Г‚ГўГҐГ¤ВіГІГј " << size << " ГҐГ«ГҐГ¬ГҐГ­ГІВіГў: ";
     for (int i = 0; i < size; i++) 
     {
         cin >> arr[i];
     }
 }
 
-void PrintArr(const int* arr, int size)  // Функція друку динамічного масиву.
+void PrintArr(const int* arr, int size)
 {
     for (int i = 0; i < size; i++) 
     {
@@ -43,12 +43,12 @@ void PrintArr(const int* arr, int size)  // Функція друку динамічного масиву.
     cout << endl;
 }
 
-void DelArr(int* arr) // Функція видалення динамічного масиву.
+void DelArr(int* arr)
 {
     delete[] arr;
 }
 
-void AddElem(int*& arr, int& size, int value)  // Функція додавання елемента в кінець масиву.
+void AddElem(int*& arr, int& size, int value)
 {
     int* newArr = new int[size + 1];
     for (int i = 0; i < size; i++) 
@@ -61,11 +61,11 @@ void AddElem(int*& arr, int& size, int value)  // Функція додавання елемента в к
     size++;
 }
 
-void InsertElem(int*& arr, int& size, int index, int value)  // Функція вставки елемента за вказаним індексом.
+void InsertElem(int*& arr, int& size, int index, int value)
 {
     if (index < 0 || index > size) 
     {
-        cout << "Невірний індекс!\n";
+        cout << "ГЌГҐГўВіГ°Г­ГЁГ© ВіГ­Г¤ГҐГЄГ±!\n";
         return;
     }
     int* newArr = new int[size + 1];
@@ -83,11 +83,11 @@ void InsertElem(int*& arr, int& size, int index, int value)  // Функція вставки 
     size++;
 }
 
-void RemoveElem(int*& arr, int& size, int index)  // Функція видалення елемента за вказаним індексом.
+void RemoveElem(int*& arr, int& size, int index)
 {
     if (index < 0 || index >= size) 
     {
-        cout << "Невірний індекс!\n";
+        cout << "ГЌГҐГўВіГ°Г­ГЁГ© ВіГ­Г¤ГҐГЄГ±!\n";
         return;
     }
     int* newArr = new int[size - 1];
@@ -104,12 +104,9 @@ void RemoveElem(int*& arr, int& size, int index)  // Функція видалення елемента 
     size--;
 }
 
-// Завдання 2
+// Р—Р°РІРґР°РЅРЅСЏ 2
 
 int* RemovePrimes(const int* arr, int size, int& newSize)  
-
-// Функція, яка отримує покажчик на динамічний масив і його розмір. 
-// Функція повинна видалити з масиву всі прості числа і повернути покажчик на новий динамічний масив.
 
 {
     newSize = 0;
@@ -130,10 +127,7 @@ int* RemovePrimes(const int* arr, int size, int& newSize)
     return result;
 }
 
-// Завдання 3
-
-// Функція, яка отримує покажчик на статичний масив і його розмір.
-// Функція розподіляє додатні, від'ємні та нульові елементи в окремі динамічні масиви.
+// Р—Р°РІРґР°РЅРЅСЏ 3
 
 void SplitBySign(const int* arr, int size,
     int*& positives, int& posSize,
